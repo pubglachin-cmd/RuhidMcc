@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f3f3f3;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #00aaff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #00aaff, #005f99);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero .btn {
+  background: white;
+  color: #005f99;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #005f99;
+  color: white;
+}
+
+/* Products */
+.products {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.product {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  background: #00aaff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #005f99;
+}
+
+/* About */
+.about {
+  background: #fff;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+/* Contact */
+.contact {
+  background: #eaf6ff;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact button {
+  background: #00aaff;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}

